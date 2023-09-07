@@ -1100,6 +1100,10 @@ button {
     }
   }
 
+  &--faq {
+    padding-bottom: 120px;
+  }
+
   &__header {
     $root: &;
     position: relative;
@@ -1136,7 +1140,7 @@ button {
         top: 100%;
         left: 0;
         height: 4px;
-        width: 62px;
+        width: 64px;
         background: var(--yellow-500);
         border-radius: var(--br-2);
       }
@@ -1167,7 +1171,31 @@ button {
       color: var(--yellow-500);
     }
 
+    &--show-line {
+      #{$root}__title {
+        padding-bottom: 12px;
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          height: 4px;
+          width: 64px;
+          background-color: var(--yellow-500);
+          border-radius: var(--br-2);
+          transform: translateX(-50%);
+        }
+      }
+      #{$root}__desc {
+        margin-top: 10px;
+      }
+    }
+
+    &--faq {
+    }
+
     &__title {
+      position: relative;
       font-weight: var(--fw-medium);
 
       &--highlight {
@@ -1339,6 +1367,85 @@ button {
 
     span {
       font-weight: var(--fw-medium);
+    }
+  }
+
+  .accordion {
+    max-width: 788px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &__item {
+      &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid #a2a7ad;
+        border-radius: var(--br-20);
+
+        > span {
+          font-size: var(--fs-b3);
+          line-height: var(--lh-b3);
+          font-weight: var(--fw-semi-bold);
+          padding: 4px 24px;
+          flex-grow: 1;
+        }
+
+        > button {
+          border: none;
+          outline: none;
+          box-shadow: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: var(--yellow-500);
+          border-radius: var(--br-16);
+          color: var(--gray-500);
+          padding: 4px 16px;
+          font-size: var(--fs-b3);
+          line-height: var(--lh-b3);
+          font-weight: var(--fw-semi-bold);
+          margin: 4px 4px 4px 0;
+          transition: all 0.25s ease-in-out;
+
+          &:hover {
+            background: var(--yellow-600);
+          }
+
+          span {
+            margin-left: 4px;
+          }
+
+          svg {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+
+            path {
+              stroke: var(--gray-500);
+            }
+          }
+        }
+      }
+
+      &__body {
+        display: none;
+        padding-top: 12px;
+
+        &__content {
+          padding: 16px 24px;
+          border: 1px solid #a2a7ad;
+          border-radius: var(--br-20);
+          font-size: var(--fs-b3);
+          line-height: var(--lh-b3);
+        }
+
+        &.show {
+          display: block;
+        }
+      }
     }
   }
 }

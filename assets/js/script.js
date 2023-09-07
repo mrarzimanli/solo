@@ -299,9 +299,9 @@ $(function () {
     }
 
     // Accordion
-    $('.accardion-item-header button').click(function () {
-        const accordionBody = $(this).closest('.accardion-item').find('.accardion-item-body');
-        $('.accardion-item-body.show').stop(true, false, true).slideUp(250);
+    $('.accordion__item__header button').click(function () {
+        const accordionBody = $(this).closest('.accordion__item').find('.accordion__item__body');
+        $('.accordion__item__body.show').stop(true, false, true).slideUp(250);
         accordionBody.stop(true, false, true).slideToggle(250);
         accordionBody.addClass("show");
     });
