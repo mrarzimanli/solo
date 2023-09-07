@@ -479,7 +479,7 @@ $(function () {
     });
 
     // Products gallery swiper
-    const productGallerySwiper = new Swiper(".productGallerySwiper", {
+    const productGallerySwiper = new Swiper(".swiper__product__gallery", {
         spaceBetween: 0,
         pagination: {
             el: ".swiper-pagination",
@@ -528,6 +528,12 @@ $(function () {
     // Fancybox
     if ($('[data-fancybox="solo-gallery"]').length > 0) {
         Fancybox.bind('[data-fancybox="solo-gallery"]', {
+            // Your custom options
+        });
+    }
+
+    if ($('[data-fancybox="product-gallery"]').length > 0) {
+        Fancybox.bind('[data-fancybox="product-gallery"]', {
             // Your custom options
         });
     }

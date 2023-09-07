@@ -208,6 +208,14 @@ button {
       }
     }
   }
+
+  &--products-category {
+    .section {
+      &--products {
+        padding-top: 48px;
+      }
+    }
+  }
 }
 
 .section {
@@ -461,6 +469,267 @@ button {
         &:hover {
           border-color: var(--yellow-500);
         }
+      }
+    }
+  }
+
+  &--products-category {
+    padding-top: 48px;
+  }
+
+  &--product-details {
+    padding-top: 48px;
+
+    #{$root}__content {
+      padding-top: 48px;
+    }
+
+    .product {
+      &__gallery {
+        width: 100%;
+
+        &__item {
+          background-color: var(--gray-200);
+          outline: none;
+        }
+      }
+
+      &__text {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        gap: 32px;
+
+        &__header {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+
+          > div {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+          }
+        }
+
+        &__body {
+          flex-grow: 1;
+        }
+
+        &__footer {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 24px;
+        }
+
+        .view-count {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          color: var(--gray-500);
+          font-weight: var(--fw-medium);
+          font-size: var(--fs-b4);
+          line-height: var(--lh-b4);
+
+          svg {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+
+            svg path {
+              stroke: var(--dark-gray);
+            }
+          }
+        }
+      }
+
+      &__name {
+        display: block;
+        font-size: var(--fs-h2);
+        line-height: var(--lh-h2);
+        font-weight: var(--fw-medium);
+      }
+
+      &__share {
+        position: relative;
+        display: flex;
+
+        & button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          text-align: center;
+          font-size: var(--fs-b3);
+          line-height: var(--lh-b3);
+          font-weight: var(--fw-medium);
+          padding: 6px 18px;
+          border-radius: var(--br-20);
+          color: var(--gray-500);
+          border: 1px solid var(--gray-500);
+          background: var(--white);
+          transition: all 0.25s ease-in-out;
+
+          svg {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+            flex-shrink: 0;
+
+            path {
+              transition: all 250ms ease-in-out;
+              fill: var(--gray-500);
+            }
+          }
+        }
+
+        & > div {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          padding-top: 16px;
+          margin-top: 24px;
+          opacity: 0;
+          visibility: hidden;
+          transition: all 250ms ease-in-out;
+        }
+
+        &__dropdown {
+          display: flex;
+          flex-wrap: nowrap;
+          justify-content: center;
+          gap: 8px;
+          padding: 12px;
+          border-radius: var(--br-8);
+          box-shadow: var(--box-shadow-800);
+          background-color: var(--white);
+          transition: all 250ms ease-in-out;
+
+          &:before {
+            content: "";
+            position: absolute;
+            top: 16px;
+            left: 32px;
+            width: 16px;
+            height: 16px;
+            background: var(--white);
+            transform: translateY(-50%) rotate(45deg);
+            border-top: 1px solid var(--light-gray);
+            border-left: 1px solid var(--light-gray);
+            border-top-left-radius: var(--br-2);
+          }
+
+          > * {
+            position: relative;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--br-4);
+            color: var(--gray-500);
+            background-color: var(--yellow-500);
+            cursor: pointer;
+            transition: all 0.25s ease-in-out;
+
+            svg {
+              width: 16px;
+              height: 16px;
+              object-fit: contain;
+
+              path {
+                transition: all 250ms ease-in-out;
+              }
+            }
+
+            &:hover {
+              background-color: var(--gray-500);
+              color: var(--white);
+            }
+          }
+
+          > a {
+            svg {
+              path {
+                fill: var(--gray-500);
+              }
+            }
+
+            &:hover {
+              svg {
+                path {
+                  fill: var(--white);
+                }
+              }
+            }
+          }
+
+          > span {
+            svg {
+              path {
+                stroke: var(--gray-500);
+              }
+            }
+
+            &:hover svg path {
+              stroke: var(--white);
+            }
+          }
+
+          .copy-to-clipboard {
+            span {
+              position: absolute;
+              top: 100%;
+              margin-top: 8px;
+              padding: 3px 12px;
+              left: 50%;
+              background-color: var(--corporate-dark-gray-500);
+              color: white;
+              font-size: var(--fs-b1);
+              line-height: var(--lh-b1);
+              border-radius: var(--br-4);
+              transform: translateX(-50%);
+              display: none;
+
+              &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 50%;
+                width: 8px;
+                height: 8px;
+                background: var(--corporate-dark-gray-500);
+                transform: translate(-50%, -50%) rotate(45deg);
+                border-top-left-radius: var(--br-2);
+              }
+            }
+          }
+        }
+
+        &:hover button {
+          background-color: var(--gray-500);
+          color: var(--white);
+
+          svg {
+            path {
+              fill: var(--white);
+            }
+          }
+        }
+
+        &:hover > div {
+          opacity: 1;
+          visibility: visible;
+          margin-top: 0;
+        }
+      }
+
+      &__price {
+        position: relative;
+        font-size: var(--fs-h2);
+        line-height: var(--lh-h2);
+        font-weight: var(--fw-semi-bold);
       }
     }
   }
@@ -761,6 +1030,7 @@ button {
   }
 
   &--text {
+    padding-top: 0;
     font-size: var(--fs-b4);
     line-height: 2;
   }
@@ -846,7 +1116,7 @@ button {
       font-size: var(--fs-b2);
       line-height: var(--lh-b2);
       margin-bottom: 16px;
-      margin-top: 60px;
+      margin-top: 36px;
 
       span {
         font-weight: var(--fw-semi-bold);
@@ -1101,6 +1371,42 @@ button {
     }
   }
 
+  &__product__gallery {
+    border-radius: var(--br-8);
+    overflow: hidden;
+
+    #{$root}-slide {
+      height: 420px;
+
+      &-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+      }
+    }
+
+    #{$root}-pagination {
+      bottom: 12px;
+    }
+
+    .swiper-button-prev {
+      left: 12px;
+      margin-top: -38px;
+    }
+
+    .swiper-button-next {
+      right: 12px;
+      margin-top: -38px;
+    }
+
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+      font-size: 24px;
+      font-weight: var(--fw-semi-bold);
+    }
+  }
+
   &-slide {
     display: flex;
 
@@ -1131,6 +1437,12 @@ button {
         background: var(--yellow-500);
       }
     }
+  }
+
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-size: 30px;
+    color: var(--yellow-500);
   }
 }
 
