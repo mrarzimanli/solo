@@ -1236,6 +1236,37 @@ button {
   border-radius: var(--br-4);
 }
 
+.section--not-found .section__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  max-width: 788px;
+  margin: 0 auto;
+}
+
+.section--not-found .section__content span {
+  font-size: 160px;
+  line-height: 1.2;
+  font-weight: var(--fw-bold);
+  letter-spacing: 2px;
+}
+
+.section--not-found .section__content p {
+  font-size: var(--fs-h2);
+  line-height: var(--lh-h2);
+  font-weight: var(--fw-medium);
+  text-transform: uppercase;
+  margin-bottom: 36px;
+}
+
 .section__header {
   position: relative;
   display: -webkit-box;
