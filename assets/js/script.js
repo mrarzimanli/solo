@@ -96,6 +96,20 @@ $(function () {
         }
     })
 
+    // Section search
+    $(".section__search__header input").on("input", function () {
+        const sectionSearch = $(this).closest(".section__search")
+        let inputValue = $(this).val()
+
+        console.log(inputValue);
+
+        if (inputValue) {
+            sectionSearch.addClass("active")
+        } else {
+            sectionSearch.removeClass("active")
+        }
+    })
+
     // Form general select
     $('.form-general').on('click', '.form-general-select-header', function () {
         let currentFormItem = $(this).closest('.form-general-item');

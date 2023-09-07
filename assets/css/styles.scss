@@ -804,6 +804,8 @@ button {
   }
 
   &__search {
+    $root: &;
+    position: relative;
     display: flex;
     flex-direction: column;
     max-width: 668px;
@@ -817,7 +819,7 @@ button {
         padding: 12px 72px 12px 24px;
         width: 100%;
         height: 60px;
-        border-radius: 104px;
+        border-radius: 30px;
         border: none;
         outline: none;
         background: var(--gray-300);
@@ -826,6 +828,8 @@ button {
         line-height: var(--lh-b2);
         caret-color: var(--yellow-500);
         font-family: var(--primary-font-family);
+        border-bottom: 1px solid transparent;
+        // transition: all 0.25s ease-in-out;
 
         &::placeholder {
           color: #a2a7ad;
@@ -851,6 +855,58 @@ button {
             stroke: var(--gray-500);
           }
         }
+      }
+    }
+
+    &__body {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      max-height: 308px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 20px 24px;
+      background: var(--white);
+      border-radius: 0px 0px 25px 25px;
+      box-shadow: var(--box-shadow-700);
+      z-index: 2;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.25s ease-in-out;
+
+      a {
+        color: #a2a7ad;
+        font-size: var(--fs-b2);
+        line-height: 2;
+
+        span {
+          font-weight: var(--fw-semi-bold);
+          color: var(--gray-500);
+          transition: all 0.25s ease-in-out;
+        }
+
+        &:hover {
+          span {
+            color: var(--yellow-500);
+          }
+        }
+      }
+    }
+
+    &.active {
+      #{$root}__header {
+        input {
+          border-radius: 15px 15px 0px 0px;
+          border-color: #e0e0e0;
+        }
+      }
+
+      #{$root}__body {
+        opacity: 1;
+        visibility: visible;
       }
     }
   }
