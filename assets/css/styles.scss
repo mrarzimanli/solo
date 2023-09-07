@@ -22,10 +22,12 @@
   /* Font size - Heading */
   --fs-h1: 48px;
   --fs-h2: 40px;
+  --fs-h3: 32px;
 
   /* Line height - Heading */
   --lh-h1: 72px;
   --lh-h2: 52px;
+  --lh-h3: 40px;
 
   /* Font size - Basic */
   --fs-b1: 12px;
@@ -90,7 +92,8 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   margin: 0;
   font-weight: var(--fw-semi-bold);
 }
@@ -103,6 +106,11 @@ h1 {
 h2 {
   font-size: var(--fs-h2);
   line-height: var(--lh-h2);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+  line-height: var(--lh-h3);
 }
 
 ul {
@@ -815,7 +823,6 @@ button {
 
   &--blogs {
     .blog-card {
-      $root: &;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
@@ -1035,13 +1042,45 @@ button {
     line-height: 2;
   }
 
+  &--about {
+    #{$root}__content {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+
+      .row:nth-child(2n) {
+        flex-direction: row-reverse;
+      }
+
+      .about-text {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
+        &__title {
+          font-weight: var(--fw-medium);
+        }
+      }
+
+      .about-image {
+        flex-grow: 1;
+
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: var(--br-4);
+        }
+      }
+    }
+  }
+
   &__header {
     $root: &;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 60px;
-    position: relative;
     max-width: 788px;
     width: 100%;
 
@@ -1058,6 +1097,26 @@ button {
         align-items: flex-start;
         flex-grow: 1;
         max-width: 788px;
+      }
+    }
+
+    &--inner {
+      margin-bottom: 24px;
+      padding-bottom: 6px;
+
+      &:after {
+        position: absolute;
+        content: "";
+        top: 100%;
+        left: 0;
+        height: 4px;
+        width: 62px;
+        background: var(--yellow-500);
+        border-radius: var(--br-2);
+      }
+
+      #{$root}__title {
+        font-weight: var(--fw-medium);
       }
     }
 
@@ -1298,6 +1357,24 @@ button {
 
 // Content
 .content {
+  :root {
+    /* Font size - Heading */
+    --fs-h1: 60px;
+    --fs-h2: 48px;
+    --fs-h3: 36px;
+    --fs-h4: 30px;
+    --fs-h5: 24px;
+    --fs-h6: 18px;
+
+    /* Line height - Heading */
+    --lh-h1: 72px;
+    --lh-h2: 60px;
+    --lh-h3: 44px;
+    --lh-h4: 38px;
+    --lh-h5: 32px;
+    --lh-h6: 28px;
+  }
+
   font-size: var(--fs-b4);
   line-height: var(--lh-b4);
 
