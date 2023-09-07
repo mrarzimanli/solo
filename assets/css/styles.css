@@ -2279,7 +2279,6 @@ button {
   position: relative;
   font-size: var(--fs-b3);
   line-height: var(--lh-b3);
-  font-weight: var(--fw-medium);
   color: var(--white);
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
@@ -2287,6 +2286,7 @@ button {
 
 .header__menu__list li a.active {
   color: var(--yellow-500);
+  font-weight: var(--fw-medium);
 }
 
 .header__menu__list li a:hover {

@@ -1944,13 +1944,13 @@ button {
           position: relative;
           font-size: var(--fs-b3);
           line-height: var(--lh-b3);
-          font-weight: var(--fw-medium);
+          // font-weight: var(--fw-medium);
           color: var(--white);
           transition: all 0.25s ease-in-out;
 
           &.active {
             color: var(--yellow-500);
-            // font-weight: var(--fw-medium);
+            font-weight: var(--fw-medium);
           }
 
           &:hover {
