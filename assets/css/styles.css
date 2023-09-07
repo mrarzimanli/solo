@@ -179,6 +179,14 @@ button {
   overflow: hidden;
 }
 
+.main:not(.main--home) {
+  padding-top: 80px;
+}
+
+.main--blogs .section--blogs {
+  padding-top: 48px;
+}
+
 .section {
   padding: 60px 0;
 }
@@ -807,6 +815,11 @@ button {
      object-fit: cover;
 }
 
+.section--text {
+  font-size: var(--fs-b4);
+  line-height: 2;
+}
+
 .section__header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -822,6 +835,48 @@ button {
   position: relative;
   max-width: 788px;
   width: 100%;
+}
+
+.section__header--filters {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 32px;
+  max-width: none;
+}
+
+.section__header--filters .section__header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-width: 788px;
+}
+
+.section__header .filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
 }
 
 .section__header--center {
@@ -873,12 +928,104 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  text-align: center;
+}
+
+.section__footer .pagination__text {
+  font-size: var(--fs-b2);
+  line-height: var(--lh-b2);
+  margin-bottom: 16px;
+  margin-top: 60px;
+}
+
+.section__footer .pagination__text span {
+  font-weight: var(--fw-semi-bold);
+}
+
+.section__search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 668px;
+  margin: 0 auto 48px;
+}
+
+.section__search__header {
+  position: relative;
+  overflow: hidden;
+}
+
+.section__search__header input {
+  padding: 12px 72px 12px 24px;
+  width: 100%;
+  height: 60px;
+  border-radius: 104px;
+  border: none;
+  outline: none;
+  background: var(--gray-300);
+  color: #a2a7ad;
+  font-size: var(--fs-b2);
+  line-height: var(--lh-b2);
+  caret-color: var(--yellow-500);
+  font-family: var(--primary-font-family);
+}
+
+.section__search__header input::-webkit-input-placeholder {
+  color: #a2a7ad;
+  font-size: var(--fs-b2);
+  line-height: var(--lh-b2);
+  font-family: var(--primary-font-family);
+}
+
+.section__search__header input:-ms-input-placeholder {
+  color: #a2a7ad;
+  font-size: var(--fs-b2);
+  line-height: var(--lh-b2);
+  font-family: var(--primary-font-family);
+}
+
+.section__search__header input::-ms-input-placeholder {
+  color: #a2a7ad;
+  font-size: var(--fs-b2);
+  line-height: var(--lh-b2);
+  font-family: var(--primary-font-family);
+}
+
+.section__search__header input::placeholder {
+  color: #a2a7ad;
+  font-size: var(--fs-b2);
+  line-height: var(--lh-b2);
+  font-family: var(--primary-font-family);
+}
+
+.section__search__header button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 72px;
+}
+
+.section__search__header button svg {
+  width: 24px;
+  height: 24px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.section__search__header button svg path {
+  stroke: var(--gray-500);
 }
 
 .overlay {
@@ -1311,6 +1458,15 @@ button {
 }
 
 .header--black {
+  background: var(--gray-500);
+  padding: 12px 0;
+}
+
+.header--black .header__logo img {
+  height: 54px;
+}
+
+.header--black.fixed {
   background: var(--gray-500);
 }
 
