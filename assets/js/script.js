@@ -27,6 +27,7 @@ $(function () {
         let langList = $(".lang-list");
         let servicesSearchForm = $(".services-search-form");
         let headerSearchForm = $(".header__search-form");
+        let dropdown = $(".dropdown");
 
         if (!langList.is(e.target) && langList.has(e.target).length === 0) {
             langList.find('button').stop(true, false, true).removeClass('active');
@@ -36,6 +37,10 @@ $(function () {
         if (!servicesSearchForm.is(e.target) && servicesSearchForm.has(e.target).length === 0) {
             servicesSearchForm.find('.form-general-select.collapsed').removeClass('collapsed');
             servicesSearchForm.find('.form-general-select-body').slideUp(200);
+        }
+
+        if (!dropdown.is(e.target) && dropdown.has(e.target).length === 0) {
+            dropdown.removeClass('active');
         }
     });
 
@@ -108,6 +113,15 @@ $(function () {
         } else {
             sectionSearch.removeClass("active")
         }
+    })
+
+    // Filter dropdown
+    $('.btn-dropdown-clear').click(function () {
+        $(this).closest('.dropdown__content').find('input').prop('checked', false)
+    })
+
+    $('.dropdown__header').click(function () {
+        $(this).closest('.dropdown').toggleClass('active')
     })
 
     // Form general select
