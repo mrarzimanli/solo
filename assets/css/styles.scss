@@ -1656,16 +1656,16 @@ button {
     }
 
     &__content {
+      display: flex;
+      flex-direction: column;
       position: absolute;
       top: 100%;
       left: 0;
       right: 0;
-      display: flex;
-      flex-direction: column;
       border-radius: var(--br-4);
       background: var(--white);
       box-shadow: var(--box-shadow-600);
-      padding: 16px;
+      padding: 8px;
       margin-top: 24px;
       opacity: 0;
       visibility: hidden;
@@ -1676,7 +1676,7 @@ button {
         display: flex;
         justify-content: space-between;
         gap: 12px;
-        padding-bottom: 8px;
+        padding: 8px;
 
         span {
           color: #2f80ed;
@@ -1701,6 +1701,14 @@ button {
       &__body {
         display: flex;
         flex-direction: column;
+
+        &__wrapper {
+          display: flex;
+          flex-direction: column;
+          padding: 0 8px;
+          overflow: auto;
+          max-height: 280px;
+        }
 
         &__item {
           position: relative;
@@ -1763,7 +1771,7 @@ button {
       }
 
       &__footer {
-        padding-top: 12px;
+        padding: 8px;
 
         .btn {
           min-width: auto;
