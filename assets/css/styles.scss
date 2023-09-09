@@ -409,7 +409,7 @@ button {
       height: 12px;
       background: rgba(227, 228, 229, 0.2);
       opacity: 1;
-      border-radius: 8px;
+      border-radius: var(--br-8);
       transition: all 0.25s ease-in-out;
 
       &-active {
@@ -1742,9 +1742,6 @@ button {
       }
     }
 
-    &--faq {
-    }
-
     &__title {
       position: relative;
       font-weight: var(--fw-medium);
@@ -1762,6 +1759,10 @@ button {
 
     &__desc {
       margin-top: 24px;
+    }
+
+    > .btn {
+      margin-top: 48px;
     }
   }
 
@@ -2621,7 +2622,7 @@ button {
 
 // Services
 .services-search-info {
-  max-width: 612px;
+  max-width: 620px;
 }
 
 .services-search-form {
@@ -2658,7 +2659,7 @@ button {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  border-radius: 8px;
+  border-radius: var(--br-4);
   padding: 14px 24px;
   color: var(--gray-500);
   background: var(--dark-gray);
@@ -2772,7 +2773,7 @@ input[type="radio"]:checked:after {
   width: 100%;
   left: 0;
   top: 100%;
-  border-radius: 8px;
+  border-radius: var(--br-4);
   overflow: hidden;
   background: var(--white);
   color: var(--gray-500);
@@ -2845,7 +2846,7 @@ input[type="radio"]:checked:after {
   display: flex;
   align-items: center;
   border: 1px solid var(--dark-gray);
-  border-radius: 20px;
+  border-radius: var(--br-20);
   padding: 10px 16px;
   height: 40px;
   max-width: 640px;
@@ -2911,6 +2912,7 @@ mark {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 16px;
 }
 
 .services-result-wrapper::after {
@@ -2919,29 +2921,28 @@ mark {
 }
 
 .services-result-item {
-  border-radius: 6px;
+  border-radius: var(--br-6);
   padding: 20px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: var(--white);
-  width: calc(50% - 16px);
-  box-shadow: var(--box-shadow-500);
-  margin: 0 8px 16px;
+  width: calc(50% - 8px);
+  box-shadow: var(--box-shadow-400);
 }
 
 .services-result-item .service-name {
   text-transform: uppercase;
-  font-size: var(--fs-b2);
-  line-height: var(--lh-b2);
-  font-weight: var(--fw-semi-bold);
+  font-size: var(--fs-b3);
+  line-height: var(--lh-b3);
+  font-weight: var(--fw-medium);
   letter-spacing: 0.05em;
 }
 
 .services-result-item .service-price {
-  font-weight: bold;
-  font-size: var(--fs-h3);
-  line-height: var(--lh-h3);
+  font-size: var(--fs-b6);
+  line-height: var(--lh-b6);
+  font-weight: var(--fw-semi-bold);
   color: var(--gray-500);
   margin-left: 12px;
   flex-shrink: 0;

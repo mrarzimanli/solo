@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solo Avto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header class="header header--black">
+        <div class="container">
+            <div class="header__content">
+                <a href="index.html" class="header__logo">
+                    <img src="assets/images/logo-dark.svg" alt="">
+                </a>
+                <nav class="header__menu d-none d-lg-flex">
+                    <ul class="header__menu__list">
+                        <li>
+                            <a href="products.html">Ehtiyat hissələri</a>
+                        </li>
+                        <li>
+                            <a class="active" href="products.html">Yağlar</a>
+                        </li>
+                        <li>
+                            <a href="vin-code.html">Vin kod</a>
+                        </li>
+                        <li>
+                            <a href="about.html">Haqqımızda</a>
+                        </li>
+                        <li>
+                            <a href="blogs.html" class="go-to">Bloq</a>
+                        </li>
+                        <li>
+                            <a href="faq.html" class="go-to">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="go-to">Əlaqə</a>
+                        </li>
+                        <li>
+                            <button id="btnSearch">
+                                <svg class="icon-loupe" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M21 21L15.0001 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M18 6L6 18M6 6L18 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </li>
+                    </ul>
+                    <form id="headerSearchForm" class="header__search-form">
+                        <input type="text" placeholder="Axtar" name="search">
+                    </form>
+                </nav>
+                <button class="btn-menu-toggle d-lg-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M3 12H21M3 6H21M9 18H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+            <div class="mobile__header d-lg-none">
+                <div class="mobile__header__content">
+                    <div class="container">
+                        <a href="index.html" class="mobile__header__logo">
+                            <img src="assets/images/logo-light.svg" alt="Solo Avto">
+                        </a>
+                        <button class="btn-menu-toggle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M18 6L6 18M6 6L18 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <nav class="mobile__header__menu">
+                    <div class="container">
+                        <ul class="mobile__header__menu__list">
+                            <li>
+                                <a href="about.html">Haqqımızda</a>
+                            </li>
+                            <li>
+                                <a href="products.html">Məhsullar</a>
+                            </li>
+                            <li>
+                                <a href="blogs.html">Bloq</a>
+                            </li>
+                            <li>
+                                <a href="faq.html">Suallar</a>
+                            </li>
+                            <li>
+                                <a href="#contact" class="go-to">Əlaqə</a>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-youtube"></i>
+                                <a href="https://youtube.com">
+                                    <span>Bizi izlə</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="mobile__header__menu__footer">
+                    <div class="container">
+                        <ul class="social-list">
+                            <li>
+                                <a href="#" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="12" fill="#F4F4F4" />
+                                        <path d="M14.3239 7.15802H15.5V5.09102C14.9305 5.02949 14.3584 4.99912 13.7859 5.00002C12.0842 5.00002 10.9206 6.07902 10.9206 8.05501V9.75801H9V12.072H10.9206V18H13.2228V12.072H15.1372L15.4249 9.75801H13.2228V8.28251C13.2228 7.60002 13.398 7.15802 14.3239 7.15802Z" fill="#343C42" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="12" fill="#F4F4F4" />
+                                        <path d="M10.0005 12C10.0005 10.8955 10.8957 9.99984 12.0002 9.99984C13.1048 9.99984 14.0005 10.8955 14.0005 12C14.0005 13.1045 13.1048 14.0002 12.0002 14.0002C10.8957 14.0002 10.0005 13.1045 10.0005 12ZM8.91918 12C8.91918 13.7016 10.2986 15.0809 12.0002 15.0809C13.7019 15.0809 15.0813 13.7016 15.0813 12C15.0813 10.2984 13.7019 8.91906 12.0002 8.91906C10.2986 8.91906 8.91918 10.2984 8.91918 12ZM14.4832 8.79693C14.4832 9.19435 14.8055 9.51712 15.2034 9.51712C15.6009 9.51712 15.9237 9.19435 15.9237 8.79693C15.9237 8.39952 15.6014 8.07722 15.2034 8.07722C14.8055 8.07722 14.4832 8.39952 14.4832 8.79693ZM9.57591 16.8838C8.99091 16.8572 8.67297 16.7598 8.46165 16.6774C8.18151 16.5683 7.98182 16.4384 7.77148 16.2286C7.56161 16.0187 7.43124 15.8191 7.32267 15.5389C7.24028 15.3276 7.14286 15.0097 7.1162 14.4247C7.08712 13.7922 7.0813 13.6023 7.0813 12C7.0813 10.3977 7.0876 10.2082 7.1162 9.57528C7.14286 8.99031 7.24076 8.67286 7.32267 8.46107C7.43172 8.18094 7.56161 7.98126 7.77148 7.77092C7.98134 7.56107 8.18103 7.43069 8.46165 7.32213C8.67297 7.23974 8.99091 7.14233 9.57591 7.11567C10.2084 7.08659 10.3984 7.08078 12.0002 7.08078C13.6026 7.08078 13.7921 7.08708 14.4251 7.11567C15.0101 7.14233 15.3275 7.24023 15.5393 7.32213C15.8195 7.43069 16.0191 7.56107 16.2295 7.77092C16.4394 7.98078 16.5692 8.18094 16.6783 8.46107C16.7607 8.67237 16.8581 8.99031 16.8848 9.57528C16.9139 10.2082 16.9197 10.3977 16.9197 12C16.9197 13.6018 16.9139 13.7918 16.8848 14.4247C16.8581 15.0097 16.7602 15.3276 16.6783 15.5389C16.5692 15.8191 16.4394 16.0187 16.2295 16.2286C16.0196 16.4384 15.8195 16.5683 15.5393 16.6774C15.328 16.7598 15.0101 16.8572 14.4251 16.8838C13.7926 16.9129 13.6026 16.9187 12.0002 16.9187C10.3984 16.9187 10.2084 16.9129 9.57591 16.8838ZM9.52648 6.03635C8.88768 6.06543 8.45147 6.16672 8.07004 6.31502C7.67551 6.46817 7.34109 6.67367 7.00715 7.00711C6.67369 7.34055 6.46819 7.67496 6.31504 8.06995C6.16673 8.45137 6.06543 8.88756 6.03635 9.52633C6.00679 10.1661 6 10.3706 6 12C6 13.6294 6.00679 13.8339 6.03635 14.4737C6.06543 15.1124 6.16673 15.5486 6.31504 15.93C6.46819 16.3246 6.67321 16.6595 7.00715 16.9929C7.3406 17.3263 7.67503 17.5313 8.07004 17.685C8.45196 17.8333 8.88768 17.9346 9.52648 17.9637C10.1667 17.9927 10.3708 18 12.0002 18C13.6302 18 13.8342 17.9932 14.474 17.9637C15.1128 17.9346 15.549 17.8333 15.9304 17.685C16.325 17.5313 16.6594 17.3263 16.9933 16.9929C17.3268 16.6595 17.5318 16.3246 17.6854 15.93C17.8338 15.5486 17.9355 15.1124 17.9641 14.4737C17.9932 13.8334 18 13.6294 18 12C18 10.3706 17.9932 10.1661 17.9641 9.52633C17.9351 8.88756 17.8338 8.45137 17.6854 8.06995C17.5318 7.67544 17.3268 7.34103 16.9933 7.00711C16.6599 6.67367 16.325 6.46817 15.9309 6.31502C15.549 6.16672 15.1128 6.06494 14.4745 6.03635C13.8347 6.00727 13.6302 6 12.0007 6C10.3708 6 10.1667 6.00679 9.52648 6.03635Z" fill="#343C42" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="12" fill="#F4F4F4" />
+                                        <path d="M17 11.6443V9.75328C16.0764 9.75328 15.3715 9.5169 14.9167 9.05747C14.4498 8.53313 14.1883 7.86911 14.1771 7.17978V7.04328L12.3125 7V14.6805C12.2485 15.0157 12.0789 15.3239 11.8264 15.5636C11.574 15.8033 11.2509 15.963 10.9008 16.0211C10.5507 16.0792 10.1905 16.0329 9.86866 15.8885C9.54687 15.744 9.27906 15.5084 9.10136 15.2134C8.92366 14.9184 8.84465 14.5782 8.87498 14.2388C8.90531 13.8994 9.04353 13.577 9.27097 13.3153C9.49842 13.0536 9.80414 12.8651 10.1469 12.7752C10.4896 12.6854 10.8528 12.6985 11.1875 12.8128V10.9818C10.9924 10.9511 10.795 10.9355 10.5972 10.9352C9.88576 10.9352 9.19027 11.1374 8.59871 11.5164C8.00715 11.8954 7.54609 12.4341 7.27382 13.0643C7.00156 13.6946 6.93032 14.3881 7.06912 15.0571C7.20792 15.7262 7.55052 16.3408 8.0536 16.8231C8.55668 17.3055 9.19765 17.634 9.89544 17.7671C10.5932 17.9001 11.3165 17.8318 11.9738 17.5708C12.6311 17.3097 13.1929 16.8677 13.5882 16.3005C13.9835 15.7333 14.1944 15.0664 14.1944 14.3842C14.1941 14.2429 14.1848 14.1017 14.1667 13.9614V10.9152C15.0145 11.4229 16.001 11.6767 17 11.6443Z" fill="#343C42" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="12" fill="#F4F4F4" />
+                                        <path d="M7 7.06481C7 6.75617 7.11262 6.50154 7.33784 6.30093C7.56306 6.10031 7.85586 6 8.21622 6C8.57014 6 8.8565 6.09876 9.07529 6.2963C9.30051 6.5 9.41313 6.76543 9.41313 7.09259C9.41313 7.38889 9.30374 7.6358 9.08494 7.83333C8.85972 8.03704 8.56371 8.13889 8.19691 8.13889H8.18726C7.83333 8.13889 7.54698 8.03704 7.32819 7.83333C7.10939 7.62963 7 7.37345 7 7.06481ZM7.12548 15.1667V8.98148H9.26834V15.1667H7.12548ZM10.4556 15.1667H12.5985V11.713C12.5985 11.4969 12.6242 11.3302 12.6757 11.213C12.7658 11.0031 12.9025 10.8256 13.0859 10.6806C13.2693 10.5355 13.4994 10.463 13.7761 10.463C14.4968 10.463 14.8571 10.929 14.8571 11.8611V15.1667H17V11.6204C17 10.7068 16.7748 10.0139 16.3243 9.54167C15.8739 9.06944 15.2786 8.83333 14.5386 8.83333C13.7085 8.83333 13.0618 9.17593 12.5985 9.86111V9.87963H12.5888L12.5985 9.86111V8.98148H10.4556C10.4685 9.17901 10.4749 9.7932 10.4749 10.8241C10.4749 11.8549 10.4685 13.3025 10.4556 15.1667Z" fill="#343C42" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="12" fill="#F4F4F4" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.3583 9.21412C16.808 9.32941 17.1626 9.66706 17.2837 10.0953C17.5086 10.8776 17.5 12.5082 17.5 12.5082C17.5 12.5082 17.5 14.1306 17.2837 14.9129C17.1626 15.3412 16.808 15.6788 16.3583 15.7941C15.5366 16 12.25 16 12.25 16C12.25 16 8.97199 16 8.14168 15.7859C7.69192 15.6706 7.33731 15.3329 7.21623 14.9047C7 14.1306 7 12.5 7 12.5C7 12.5 7 10.8776 7.21623 10.0953C7.33731 9.66706 7.70057 9.32118 8.14168 9.20588C8.96334 9 12.25 9 12.25 9C12.25 9 15.5366 9 16.3583 9.21412ZM11.2033 13.9995V11.0019L13.9364 12.5007L11.2033 13.9995Z" fill="#343C42" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header end -->
+    <!-- Main -->
+    <main class="main main--services">
+        <!-- About end -->
+        <section class="section section--services">
+            <div class="container">
+                <div class="section__header section__header--center section__header--show-line">
+                    <h2 class="section__header__title">Avtotəmir xidmətlərimiz və qiymətləri</h2>
+                    <p class="section__header__desc">Avtomobilin üçün xidmətlər barədə tam məlumat al!</p>
+                </div>
+            </div>
+            <div class="section bg-dark-gray">
+                <div class="container">
+                    <div class="row gy-5 gx-lg-5">
+                        <div class="col-lg-7">
+                            <div class="services-search-info">
+                                <div class="inner-section-header">
+                                    <h3 class="section-title">Görəsən təmir xidməti neçəyə başa gələcək?</h3>
+                                </div>
+                                <div class="content">
+                                    <p>Avtomobilini avtoservisimizə gətirməyi düşünürsən? O zaman əvvəlcədən servis xidməti barədə məlumat ala bilərsən. Avtomobilinin brendini, modelini və ilini seç, “Xidmətləri göstər” düyməsini kliklə və sənin avtomobilinə xüsusi olaraq təklif edilən xidmətlər barədə məlumat əldə et. SOLO AVTO Servis Mərkəzi bu məlumatları bütün müştəriləri üçün şəffaflaşdırdı.&nbsp;<br>
+                                        <strong>Burada hansı məlumatları əldə edəcəksən?</strong>
+                                    </p>
+                                    <ul>
+                                        <li>Avtomobil modelinə özəl xidmət siyahısı</li>
+                                        <li>Xidmətlərin qiymətləri (və ya aralığı)</li>
+                                    </ul>
+                                    <p>&nbsp;</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="form-general services-search-form">
+                                <div class="form-general-item active">
+                                    <span class="form-general-label">Avtomobil brendini seç</span>
+                                    <div class="form-general-select">
+                                        <div class="form-general-select-header" data-label="Brend">
+                                            <span>Brend</span>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 9L12 15L18 9" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="form-general-select-body">
+                                            <div class="form-general-option-group">
+                                                <div data-value="Brend 1" class="form-general-option">Brend 1</div>
+                                                <div data-value="Brend 2" class="form-general-option">Brend 2</div>
+                                                <div data-value="Brend 3" class="form-general-option">Brend 3</div>
+                                                <div data-value="Brend 4" class="form-general-option">Brend 4</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-general-item">
+                                    <span class="form-general-label">Avtomobil brendini seç</span>
+                                    <div class="form-general-select">
+                                        <div class="form-general-select-header" data-label="Model">
+                                            <span>Model</span>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 9L12 15L18 9" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="form-general-select-body">
+                                            <div class="form-general-option-group">
+                                                <div data-value="Model 1" class="form-general-option">Model 1</div>
+                                                <div data-value="Model 2" class="form-general-option">Model 2</div>
+                                                <div data-value="Model 3" class="form-general-option">Model 3</div>
+                                                <div data-value="Model 4" class="form-general-option">Model 4</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-general-item">
+                                    <span class="form-general-label">İstehsal il aralığını seç</span>
+                                    <div class="form-general-select">
+                                        <div class="form-general-select-header" data-label="İstehsal ili">
+                                            <span>İstehsal ili</span>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 9L12 15L18 9" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="form-general-select-body">
+                                            <div class="form-general-option-group">
+                                                <div data-value="2002-2005" class="form-general-option">2002-2005</div>
+                                                <div data-value="2002-2006" class="form-general-option">2002-2006</div>
+                                                <div data-value="2002-2007" class="form-general-option">2002-2007</div>
+                                                <div data-value="2002-2008" class="form-general-option">2002-2008</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#services-result" id="showSearchResult" class="btn btn--submit btn__general btn__general--contained btn__general--yellow">Xidmətləri göstər</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section--services-result">
+            <div class="container">
+                <div class="section__header section__header--center section__header--show-line">
+                    <h2 class="section__header__title">Xidmətlər</h2>
+                </div>
+                <div class="services-result-content">
+                    <!-- <div class="marked-search">
+                        <button class="search-loupe" aria-label="search loupe">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.5 17.5L14.5834 14.5833M16.6667 9.58333C16.6667 13.4954 13.4954 16.6667 9.58333 16.6667C5.67132 16.6667 2.5 13.4954 2.5 9.58333C2.5 5.67132 5.67132 2.5 9.58333 2.5C13.4954 2.5 16.6667 5.67132 16.6667 9.58333Z" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <input class="marked-search-input" type="text" placeholder="Search">
+                        <button class="clear-filter">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 6L6 18M6 6L18 18" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div> -->
+                    <div class="section__content services-result-wrapper">
+                        <div class="services-result-item">
+                            <span class="service-name">ABS BALONUNUN DƏYİŞDİRİLMƏSİ 11</span>
+                            <span class="service-price">15 AZN</span>
+                        </div>
+                        <div class="services-result-item">
+                            <span class="service-name">ABS BALONUNUN DƏYİŞDİRİLMƏSİ 22</span>
+                            <span class="service-price">15 AZN</span>
+                        </div>
+                        <div class="services-result-item">
+                            <span class="service-name">ABS BALONUNUN DƏYİŞDİRİLMƏSİ 23</span>
+                            <span class="service-price">15 AZN</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="empty-result-message">Axtarış nəticələriniz burada görünəcək!</div> -->
+            </div>
+        </section>
+        <!-- <section class="section section--service-contact">
+            <div class="container">
+                <div class="section__header section__header--center section__header--show-line">
+                    <h3 class="section__header__title">Xidmətlər barədə daha ətraflı məlumat əldə etmək üçün</h3>
+                    <a target="_blank" href="https://wa.me/+994776002756" class="btn btn__general btn__general--contained btn__general--yellow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.6025 14.412C17.3614 14.2921 15.794 13.573 15.5529 13.4532C15.3117 13.3333 15.0706 13.3333 14.8295 13.573C14.5884 13.8127 14.1061 14.5318 13.865 14.7715C13.7444 15.0112 13.5033 15.0112 13.2621 14.8914C12.4182 14.5318 11.5742 14.0524 10.8508 13.4532C10.248 12.8539 9.64519 12.1348 9.16294 11.4157C9.04237 11.176 9.16293 10.9363 9.2835 10.8165C9.40406 10.6966 9.52463 10.4569 9.76576 10.3371C9.88632 10.2172 10.0069 9.97753 10.0069 9.85768C10.1275 9.73783 10.1275 9.49813 10.0069 9.37828C9.88632 9.25843 9.2835 7.82022 9.04237 7.22097C8.9218 6.38202 8.68067 6.38202 8.43954 6.38202H7.83672C7.59559 6.38202 7.2339 6.62172 7.11333 6.74157C6.38994 7.46067 6.02825 8.29963 6.02825 9.25843C6.14881 10.3371 6.51051 11.4157 7.2339 12.3745C8.56011 14.2921 10.248 15.8502 12.2976 16.809C12.9004 17.0487 13.3827 17.2884 13.9855 17.4082C14.5884 17.6479 15.1912 17.6479 15.9146 17.5281C16.7585 17.4082 17.4819 16.809 17.9642 16.0899C18.2053 15.6105 18.2053 15.1311 18.0847 14.6517L17.6025 14.412ZM20.6166 3.50562C15.9146 -1.16854 8.31898 -1.16854 3.61695 3.50562C-0.24113 7.34082 -0.964519 13.2135 1.68791 17.8876L0 24L6.38994 22.3221C8.19842 23.2809 10.1275 23.7603 12.0565 23.7603C18.6876 23.7603 23.9924 18.4869 23.9924 11.8951C24.113 8.77903 22.7868 5.78277 20.6166 3.50562ZM17.3613 20.2846C15.794 21.2434 13.9855 21.8427 12.0565 21.8427C10.248 21.8427 8.56011 21.3633 6.99277 20.5243L6.63107 20.2846L2.89356 21.2434L3.85808 17.6479L3.61695 17.2884C0.723389 12.4944 2.17017 6.50187 6.8722 3.50562C11.5742 0.509363 17.6025 2.06742 20.496 6.62172C23.3896 11.2959 22.0634 17.4082 17.3613 20.2846Z" fill="#343C42"></path>
+                        </svg>
+                        <span>Bizdən soruşun</span>
+                    </a>
+                </div>
+            </div>
+        </section> -->
+        <!-- CTA start -->
+        <section class="section section--cta" style="background: url(assets/images/cta.jpeg); background-size: cover; background-position: center; background-attachment: fixed;">
+            <div class="container">
+                <div class="section__header section__header--white section__header--filters">
+                    <div class="section__header__container">
+                        <h2 class="section__header__title section__header__title--highlight"> Sualın var? <span class="color-yellow">Cavablamağa hazırıq!</span>
+                        </h2>
+                        <p class="section__header__desc">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years</p>
+                    </div>
+                    <a href="#" class="btn btn__general btn__general--contained btn__general--yellow"> Bizə yaz </a>
+                </div>
+            </div>
+            <div class="overlay"></div>
+        </section>
+    </main>
+    <!-- Main end -->
+    <!-- Footer start -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>Copyright © Solo Avto | Bütün hüquqlar qorunur.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer end -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
