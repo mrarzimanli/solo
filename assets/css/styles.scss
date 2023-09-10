@@ -2072,7 +2072,7 @@ button {
       margin-top: 24px;
       opacity: 0;
       visibility: hidden;
-      z-index: 2;
+      z-index: 99;
       transition: all 0.25s ease-in-out;
 
       &__header {
@@ -2119,13 +2119,13 @@ button {
           align-items: center;
           font-size: var(--fs-b2);
           line-height: var(--lh-b2);
-          padding: 6px 0;
           cursor: pointer;
 
           label {
             font-weight: var(--fw-medium);
             flex-grow: 1;
-            padding-right: 24px;
+            text-align: left;
+            padding: 6px 24px 6px 0;
             position: relative;
             cursor: pointer;
             z-index: 2;

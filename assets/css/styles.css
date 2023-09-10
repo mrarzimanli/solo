@@ -2442,7 +2442,7 @@ button {
   margin-top: 24px;
   opacity: 0;
   visibility: hidden;
-  z-index: 2;
+  z-index: 99;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
@@ -2511,7 +2511,6 @@ button {
           align-items: center;
   font-size: var(--fs-b2);
   line-height: var(--lh-b2);
-  padding: 6px 0;
   cursor: pointer;
 }
 
@@ -2520,7 +2519,8 @@ button {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  padding-right: 24px;
+  text-align: left;
+  padding: 6px 24px 6px 0;
   position: relative;
   cursor: pointer;
   z-index: 2;
