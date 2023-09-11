@@ -26,8 +26,8 @@ $(function () {
     $(document).mouseup(function (e) {
         let langList = $(".lang-list");
         let servicesSearchForm = $(".services-search-form");
-        let headerSearchForm = $(".header__search-form");
         let dropdown = $(".dropdown");
+        let sectionSearch = $(".section__search");
 
         if (!langList.is(e.target) && langList.has(e.target).length === 0) {
             langList.find('button').stop(true, false, true).removeClass('active');
@@ -41,6 +41,10 @@ $(function () {
 
         if (!dropdown.is(e.target) && dropdown.has(e.target).length === 0) {
             dropdown.removeClass('active');
+        }
+
+        if (!sectionSearch.is(e.target) && sectionSearch.has(e.target).length === 0) {
+            sectionSearch.removeClass('active');
         }
     });
 
@@ -106,9 +110,7 @@ $(function () {
         const sectionSearch = $(this).closest(".section__search")
         let inputValue = $(this).val()
 
-        console.log(inputValue);
-
-        if (inputValue) {
+        if (inputValue.length > 3) {
             sectionSearch.addClass("active")
         } else {
             sectionSearch.removeClass("active")
@@ -122,6 +124,43 @@ $(function () {
 
     $('.dropdown__header').click(function () {
         $(this).closest('.dropdown').toggleClass('active')
+    })
+
+    // Vin code
+    $('#vinCodeInput').on('input', function () {
+        $(this).val($(this).val().replace(/[^a-z0-9]/gi, ''))
+
+        const validationMessage = $(this).closest('.vin-code__search__wrapper').find('.validation-message')
+
+        if (validationMessage) {
+            validationMessage.remove()
+        }
+    })
+
+    $('#btnCheckVinCode').click(function () {
+        const vinCodeInput = $('#vinCodeInput')
+        const message = `<span class="validation-message">VIN kod 17 simvoldan ibarət olmalıdır</span>`
+
+        if (vinCodeInput.val().length === 17) {
+            $("#vinCode").text(vinCodeInput.val())
+            $(".vin-code__result").addClass("show")
+            setTimeout(function () {
+                $(".vin-code__result").addClass("fade-in")
+            }, 0)
+            vinCodeInput.data("value", vinCodeInput.val())
+            vinCodeInput.val("")
+        } else {
+            vinCodeInput.closest('.vin-code__search__wrapper').append(message);
+            setTimeout(function () {
+                $(".validation-message").addClass("fade-in")
+            }, 0)
+        }
+    })
+
+    $('#btnShowVinCode').click(function () {
+        const vinCode = $('#vinCodeInput').data("value")
+        const url = "https://www.vindecoderz.com/EN/check-lookup/" + vinCode
+        window.open(url, '_blank');
     })
 
     // Form general select

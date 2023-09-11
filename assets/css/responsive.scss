@@ -538,6 +538,20 @@
       }
     }
 
+    &--vin {
+      .vin-code {
+        max-width: 450px;
+        &__search {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        &__results {
+          margin-top: 32px;
+        }
+      }
+    }
+
     &__header {
       &--filters {
         .filters {

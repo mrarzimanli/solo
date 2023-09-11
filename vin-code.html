@@ -165,7 +165,21 @@
                     <p class="section__header__desc">VIN kodu on yeddi simvoldan (rəqəmlər və hərflər) ibarət fərdi avtomobil kodudur. BAN kod dediyimiz VİN kodda istehsalçı, avtomobilin parametrləri və montaj xəttindən çıxma tarixi haqqında məlumatlar var. Avtomobilinizi VIN kodu ilə pulsuz yoxlayın.</p>
                 </div>
                 <div class="section__content">
-                    <div id="parts-catalog" data-key="TWS-3B212936-B6FE-4851-A2F4-8B2009CD5F91" data-back-url="/search?article={article}&brand={brand}&lang={lang}" data-ga-id="G-T2JQKRH3LE"></div>
+                    <div class="vin-code">
+                        <div class="vin-code__search">
+                            <div class="vin-code__search__wrapper">
+                                <label for="vinCodeInput">VIN kod <span>*</span></label>
+                                <input id="vinCodeInput" type="text" placeholder="17 simvollu kodu daxil edin" maxlength="17">
+                            </div>
+                            <button id="btnCheckVinCode" class="btn btn__general btn__general--contained btn__general--yellow">Yoxla</button>
+                        </div>
+                        <div class="vin-code__result">
+                            <p>
+                                <span id="vinCode"></span> - Vin kod üzrə axtarış nəticəsinə baxmaq üçün aşağıdakı linkə keçin.
+                            </p>
+                            <button id="btnShowVinCode" class="btn btn__general btn__general--contained btn__general--yellow">Nəticəyə bax</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
