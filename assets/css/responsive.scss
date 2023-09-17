@@ -47,6 +47,24 @@
         }
       }
     }
+
+    &--product-details {
+      .product {
+        &__text {
+          &__footer {
+            gap: 12px;
+
+            > div {
+              gap: 12px;
+
+              .btn {
+                min-width: 160px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -340,7 +358,7 @@
 
         &__title {
           &:hover {
-            color: var(--gray-500);
+            color: var(--white);
           }
         }
       }
@@ -389,6 +407,21 @@
         &__map {
           width: 100%;
           height: 320px;
+        }
+      }
+    }
+
+    &--vin {
+      .vin-code {
+        &__search {
+          &__wrapper {
+            .validation-message {
+              position: static;
+              top: 100%;
+              left: inherit;
+              margin-top: 4px;
+            }
+          }
         }
       }
     }
@@ -513,13 +546,31 @@
       .product {
         &__text {
           gap: 24px;
+
           &__footer {
             flex-direction: column-reverse;
+            align-items: stretch;
+
+            > div {
+              flex-direction: row-reverse;
+              flex-wrap: wrap;
+
+              > * {
+                min-width: 200px !important;
+                flex: 1;
+                flex-shrink: 0;
+              }
+            }
 
             .btn {
-              width: 100%;
+              flex-grow: 1;
             }
           }
+        }
+
+        &__price {
+          font-size: var(--fs-h2);
+          line-height: var(--lh-h2);
         }
       }
     }

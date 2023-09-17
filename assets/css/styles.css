@@ -57,26 +57,18 @@
   --br-16: 16px;
   --br-20: 20px;
   /* Box shadow */
-  --box-shadow-100: 0px 4px 4px -2px rgba(24, 39, 75, 0.08),
-      0px 2px 4px -2px rgba(24, 39, 75, 0.12);
-  --box-shadow-200: 0px 8px 8px -4px rgba(24, 39, 75, 0.08),
-      0px 4px 6px -4px rgba(24, 39, 75, 0.12);
-  --box-shadow-300: 0px 8px 16px -6px rgba(24, 39, 75, 0.08),
-      0px 6px 8px -6px rgba(24, 39, 75, 0.12);
-  --box-shadow-400: 0px 8px 24px -4px rgba(24, 39, 75, 0.08),
-      0px 6px 12px -6px rgba(24, 39, 75, 0.12);
-  --box-shadow-500: 0px 10px 32px -4px rgba(24, 39, 75, 0.1),
-      0px 6px 14px -6px rgba(24, 39, 75, 0.12);
-  --box-shadow-600: 0px 12px 42px -4px rgba(24, 39, 75, 0.12),
-      0px 8px 18px -6px rgba(24, 39, 75, 0.12);
-  --box-shadow-700: 0px 14px 64px -4px rgba(24, 39, 75, 0.12),
-      0px 8px 22px -6px rgba(24, 39, 75, 0.12);
-  --box-shadow-800: 0px 18px 88px -4px rgba(24, 39, 75, 0.14),
-      0px 8px 28px -6px rgba(24, 39, 75, 0.12);
+  --box-shadow-100: 0px 4px 4px -2px rgba(24, 39, 75, 0.08), 0px 2px 4px -2px rgba(24, 39, 75, 0.12);
+  --box-shadow-200: 0px 8px 8px -4px rgba(24, 39, 75, 0.08), 0px 4px 6px -4px rgba(24, 39, 75, 0.12);
+  --box-shadow-300: 0px 8px 16px -6px rgba(24, 39, 75, 0.08), 0px 6px 8px -6px rgba(24, 39, 75, 0.12);
+  --box-shadow-400: 0px 8px 24px -4px rgba(24, 39, 75, 0.08), 0px 6px 12px -6px rgba(24, 39, 75, 0.12);
+  --box-shadow-500: 0px 10px 32px -4px rgba(24, 39, 75, 0.1), 0px 6px 14px -6px rgba(24, 39, 75, 0.12);
+  --box-shadow-600: 0px 12px 42px -4px rgba(24, 39, 75, 0.12), 0px 8px 18px -6px rgba(24, 39, 75, 0.12);
+  --box-shadow-700: 0px 14px 64px -4px rgba(24, 39, 75, 0.12), 0px 8px 22px -6px rgba(24, 39, 75, 0.12);
+  --box-shadow-800: 0px 18px 88px -4px rgba(24, 39, 75, 0.14), 0px 8px 28px -6px rgba(24, 39, 75, 0.12);
 }
 
 /* ==============================
-      2. Basics
+        2. Basics
 ============================== */
 html {
   scrollbar-color: var(--yellow-500) var(--gray-500);
@@ -1027,7 +1019,17 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 24px;
+  gap: 20px;
+}
+
+.section--product-details .product__text__footer > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
 }
 
 .section--product-details .product__text .view-count {
@@ -1069,49 +1071,11 @@ button {
   display: flex;
 }
 
-.section--product-details .product__share button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 8px;
-  text-align: center;
-  font-size: var(--fs-b3);
-  line-height: var(--lh-b3);
-  font-weight: var(--fw-medium);
-  padding: 6px 18px;
-  border-radius: var(--br-20);
-  color: var(--gray-500);
-  border: 1px solid var(--gray-500);
-  background: var(--white);
-  -webkit-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
-}
-
-.section--product-details .product__share button svg {
-  width: 20px;
-  height: 20px;
-  -o-object-fit: contain;
-     object-fit: contain;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-}
-
-.section--product-details .product__share button svg path {
-  -webkit-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out;
-  fill: var(--gray-500);
-}
-
 .section--product-details .product__share > div {
   position: absolute;
   top: 100%;
   left: 0;
+  min-width: 100%;
   padding-top: 16px;
   margin-top: 24px;
   opacity: 0;
@@ -1131,7 +1095,7 @@ button {
           justify-content: center;
   gap: 8px;
   padding: 12px;
-  border-radius: var(--br-8);
+  border-radius: var(--br-4);
   -webkit-box-shadow: var(--box-shadow-800);
           box-shadow: var(--box-shadow-800);
   background-color: var(--white);
@@ -1143,14 +1107,12 @@ button {
   content: "";
   position: absolute;
   top: 16px;
-  left: 32px;
-  width: 16px;
-  height: 16px;
+  left: 50%;
+  width: 14px;
+  height: 14px;
   background: var(--white);
-  -webkit-transform: translateY(-50%) rotate(45deg);
-          transform: translateY(-50%) rotate(45deg);
-  border-top: 1px solid var(--light-gray);
-  border-left: 1px solid var(--light-gray);
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
   border-top-left-radius: var(--br-2);
 }
 
@@ -1237,15 +1199,6 @@ button {
   border-top-left-radius: var(--br-2);
 }
 
-.section--product-details .product__share:hover button {
-  background-color: var(--gray-500);
-  color: var(--white);
-}
-
-.section--product-details .product__share:hover button svg path {
-  fill: var(--white);
-}
-
 .section--product-details .product__share:hover > div {
   opacity: 1;
   visibility: visible;
@@ -1253,10 +1206,12 @@ button {
 }
 
 .section--product-details .product__price {
-  position: relative;
   font-size: var(--fs-h2);
   line-height: var(--lh-h2);
   font-weight: var(--fw-semi-bold);
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  text-align: center;
 }
 
 .section--cta {
@@ -1273,6 +1228,10 @@ button {
   padding: 90px 0;
   margin: 60px 0;
   background: var(--gray-500);
+}
+
+.section--testimonials .section__header {
+  margin-bottom: 32px;
 }
 
 .section--testimonials .section__header__title {
@@ -2015,7 +1974,6 @@ button {
   font-weight: var(--fw-medium);
   margin-top: 6px;
   color: var(--danger);
-  display: none;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all 0.25s ease-in-out;
@@ -2857,7 +2815,7 @@ button {
 }
 
 /* ==============================
-    3. Header
+      3. Header
 ============================== */
 .header {
   position: fixed;
@@ -3206,7 +3164,7 @@ button {
 }
 
 /* ==============================
-    4. Footer
+      4. Footer
 ============================== */
 .footer {
   background: var(--gray-600);
@@ -3219,7 +3177,7 @@ button {
 }
 
 /* ==============================
-      OLD STYLES
+        OLD STYLES
 ============================== */
 .inner-section-header {
   position: relative;
